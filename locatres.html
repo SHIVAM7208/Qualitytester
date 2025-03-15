@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selenium Study Topics</title>
+        <!-- Corrected CSS path -->
+        <link rel="stylesheet" href="Assets/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script defer src="Assets\script.js"></script>
+    </head>
+<body>
+    <div id="header"></div>
+    <div class="container-fluid row">
+      
+        <div id="ad-bar" class="ad-bar-left col-md-2"></div>
+                 
+       		 <div class="main-content col-md-8">
+                 
+                <div class="container">
+                    <section class="row1">
+                        <fieldset class="elment">
+                            <legend>Radio Button </legend>
+                            <label><input value="radio1" name="radioButton" type="radio"> Radio1</label>
+                            <label><input value="radio2" name="radioButton" type="radio"> Radio2</label>
+                            <label><input value="radio3" name="radioButton" type="radio"> Radio3</label>
+                        </fieldset>
+            
+                        <fieldset class="elment">
+                            <legend>Suggestion Class </legend>
+                            <input type="text" id="autocomplete" placeholder="Type to Select Countries">
+                        </fieldset>
+            
+                        <fieldset class="elment">
+                            <legend>Dropdown </legend>
+                            <select>
+                                <option value="">Select</option>
+                                <option value="option1">Option1</option>
+                                <option value="option2">Option2</option>
+                                <option value="option3">Option3</option>
+                            </select>
+                        </fieldset>
+                    </section>
+            
+                    <section class="row1">
+                        <fieldset class="elment">
+                            <legend>Switch Window </legend>
+                            <button onclick="openWindow()">Open Window</button>
+                        </fieldset>
+            
+                        <fieldset class="elment">
+                            <legend>Checkbox </legend>
+                            <label for="bmw">
+                            <input id="checkBoxOption1" value="option1" name="checkBoxOption1" type="checkbox"> Option1</label>
+                            <label for="benz">
+                            <input id="checkBoxOption2" value="option2" name="checkBoxOption2" type="checkbox"> Option2</label>
+                            <label for="honda">
+                            <input id="checkBoxOption3" value="option3" name="checkBoxOption3" type="checkbox"> Option3</label>
+                        </fieldset>
+            
+                        <fieldset class="elment">
+                            <legend>Switch To Alert </legend>
+                            <input type="text" placeholder="Enter Your Name">
+                            <button onclick="displayAlert()">Alert</button>
+                            <button onclick="displayConfirm()">Confirm</button>
+                        </fieldset>
+                    </section>
+            
+                    <section>
+                        <div>
+                            <fieldset>
+                                <legend>Web Table </legend>
+                                <table >
+                                    <thead>
+                                        <tr>
+                                            <th>Instructor</th>
+                                            <th>Course</th>
+                                            <th>Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Shivam Dubey</td>
+                                            <td>Selenium Webdriver with Java Basics + Advanced + Interview Guide</td>
+                                            <td>30</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Shivam Dubey</td>
+                                            <td>Learn SQL in Practical + Database Testing from Scratch</td>
+                                            <td>25</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </fieldset>
+                        </div>
+                        <section class="row1">
+                            <div>
+                                <fieldset class="elment">
+                                    <legend>Element Displayed </legend>
+                                    <button onclick="hideElement()">Hide</button>
+                                    <button onclick="showElement()">Show</button>
+                                    <input type="text" placeholder="Hide/Show Example">
+                                </fieldset>
+                            </div>
+            
+            
+            
+                            <fieldset class="elment">
+                                <legend>Mouse Hover </legend>
+                                <div class="mouse-hover">
+                                    <button id="mousehover" class="btn btn-primary">Mouse Hover</button>
+                                <div class="mouse-hover-content">
+                                    <a href="#top">Top</a>
+                                    <a href="#">Reload</a>
+                                </div>
+                            </fieldset>
+            
+            
+            
+                            <fieldset class="elment">
+                                <legend>Calendar </legend>
+                                <input type="date">
+                            </fieldset>
+                        </section>
+            
+                        <section class="row1">
+                            <fieldset class="elment">
+                                <legend>I-Frame</legend>
+                                <iframe src="./form.html" ></iframe>
+                               <iframe src="./form.html" ></iframe> 
+                            </fieldset>
+                        </section>
+                        <fieldset>
+                            <table >
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <h3>Test</h3>
+                                                <li><a href="http://www.restapitutorial.com/">REST API</a></li>
+                                                <li><a href="https://www.soapui.org/">SoapUI</a></li>
+                                                <li><a href="https://appium.io/">Appium</a></li>
+                                                <li><a href="https://jmeter.apache.org/">JMeter</a></li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <h3>locators design patterns</h3>
+                                                <li><a href="#">Page Object Model</a></li>
+                                                <li><a href="#">Page Factory</a></li>
+                                                <li><a href="#">Object Repository</a></li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <h3>Java Design Pattern</h3>
+                                                <li><a href="#">Singleton Design Pattern</a></li>
+                                                <li><a href="#">Factory Design Pattern</a></li>
+                                                <li><a href="#">Observer Design Pattern</a></li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <h3>Web-site for Project</h3>
+                                                <li><a href="https://demo.applitools.com/app.html">Singleton Design Pattern</a></li>
+                                                <li><a href="https://candymapper.com/">Factory Design Pattern</a></li>
+                                                <li><a href="https://www.saucedemo.com/">Observer Design Pattern</a></li>
+                                                <li><a href="https://www.demoblaze.com/">Observer Design Pattern</a></li>
+                                                <li><a href="https://opensource-demo.orangehrmlive.com/">Observer Design Pattern</a></li>
+                                            </ul>
+                                        </td>
+            
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </fieldset>
+                </div>
+
+             </div>
+          <div id="ad-bar" class="ad-bar-right col-md-2"></div>
+    </div>
+   
+    <div id="footer"></div>
+    <button id="scrollToTopBtn" >
+        ↑
+     </button>
+    
+</body>
+
+</html>
