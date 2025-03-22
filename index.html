@@ -1,74 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selenium Study Topics</title>
-        <!-- Corrected CSS path -->
-        <link rel="stylesheet" href="/Assets/style.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-       <!-- <script defer src="Assets\script.js"></script>   -->
-       <script src="/Assets/script.js"></script>
-    </head>
+    <!-- Corrected CSS path -->
+    <link rel="stylesheet" href="/Assets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Include Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
 <body>
     <div id="header"></div>
-    <div class="container-fluid row">
-      
+    <div class="container-fluid row position-relative">
+
         <div id="ad-bar" class="ad-bar-left col-md-2"></div>
-                 
-       		 <div class="main-content col-md-8">
 
-                <div class="card mx-auto my-5" style="max-width: 500px;">
-                    <div class="card-body">
-                        <h1 class="text-center">Login</h1>
-                        <form id="userForm">
-                            <div style="margin-bottom: 50px;">
-                                <h2>Welcome</h2>   
-                                <h5>First Step Toward Selenium</h5>
+        <div class="main-content col-md-8">
+
+            <div class="card mx-auto my-5" style="max-width: 500px;">
+                <div class="card-body">
+                    <h1 class="text-center">Login</h1>
+                    <form id="userForm">
+                        <div style="margin-bottom: 50px;">
+                            <h2>Welcome</h2>
+                            <h5>First Step Toward Selenium</h5>
+                        </div>
+
+                        <div id="userName-wrapper" class="mt-2 row">
+                            <div class="col-md-3 col-sm-12">
+                                <label class="form-label" id="userName-label" for="userName">UserName</label>
                             </div>
-                
-                            <div id="userName-wrapper" class="mt-2 row">
-                                <div class="col-md-3 col-sm-12">
-                                    <label class="form-label" id="userName-label" for="userName">UserName</label>
-                                </div>
-                                <div class="col-md-9 col-sm-12">
-                                    <input required autocomplete="off" placeholder="UserName" type="text" id="userName" class="form-control">
-                                </div>
+                            <div class="col-md-9 col-sm-12">
+                                <input required autocomplete="off" placeholder="UserName" type="text" id="userName"
+                                    class="form-control">
                             </div>
-                
-                            <div id="password-wrapper" class="mt-2 row">
-                                <div class="col-md-3 col-sm-12">
-                                    <label class="form-label" id="password-label" for="password">Password</label>
-                                </div>
-                                <div class="col-md-9 col-sm-12">
-                                    <input required autocomplete="off" placeholder="Password" name="password" type="password" id="password" class="form-control">
-                                </div>
+                        </div>
+
+                        <div id="password-wrapper" class="mt-2 row">
+                            <div class="col-md-3 col-sm-12">
+                                <label class="form-label" id="password-label" for="password">Password</label>
                             </div>
-                
-                            <div class="mt-2 buttonWrap text-center">
-                                <button id="login" type="button" class="btn btn-primary mx-2" onclick="validateForm()">Login</button>
-                                <button id="newUser" type="button" class="btn btn-secondary mx-2">New User</button>
+                            <div class="col-md-9 col-sm-12">
+                                <input required autocomplete="off" placeholder="Password" name="password"
+                                    type="password" id="password" class="form-control">
                             </div>
-                
-                            <div id="output" class="mt-4">
-                                <div id="message" class="text-center"></div>
-                            </div>
-                
-                            <div id="forgotPassword" style="display:none; color: red; cursor: pointer;" onclick="showPassword()">Forgot Password?</div>
-                        </form>
-                    </div>
+                        </div>
+
+                        <div class="mt-2 buttonWrap text-center">
+                            <button id="login" type="button" class="btn btn-primary mx-2"
+                                onclick="validateForm()">Login</button>
+                            <button id="newUser" type="button" class="btn btn-secondary mx-2">New User</button>
+                        </div>
+
+                        <div id="output" class="mt-4">
+                            <div id="message" class="text-center"></div>
+                        </div>
+
+                        <div id="forgotPassword" style="display:none; color: red; cursor: pointer;"
+                            onclick="showPassword()">Forgot Password?</div>
+                    </form>
                 </div>
-
             </div>
-          <div id="ad-bar" class="ad-bar-right col-md-2"></div>
+
+        </div>
+        <div id="ad-bar" class="ad-bar-right col-md-2" ></div>
     </div>
-   
-    <div id="footer"></div>
-    <button id="scrollToTopBtn" >
+
+    <div id="footer" class="position-absolute bottom-0 w-100"></div>
+    <button id="scrollToTopBtn">
         ↑
-     </button>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script defer src="Assets\script.js"></script>   -->
+    <script src="/Assets/script.js"></script>
 </body>
 
 </html>

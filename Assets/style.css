@@ -56,21 +56,27 @@ header.scrolled {
 .ad-bar-left {
     height: auto;
     background-color: #f9f9f9; /* Light background to distinguish ads */
-    border: 1px solid red;
+
     padding: 10px;
     text-align: center;
     overflow: hidden;
 }
 
 .ad-bar-right{
-   
+    
     height: auto;
     background-color: #f9f9f9; /* Light background to distinguish ads */
-    border: 1px solid red;
     padding: 10px;
     text-align: center;
     overflow: hidden;
 }
+
+@media (max-width: 750px) {
+    .ad-bar-left,
+    .ad-bar-right {
+      display: none;
+    }
+  }
 
 #submit{
     margin:5rem;
@@ -152,13 +158,13 @@ button:hover {
     border-radius: 50%;
     text-align: center;
     line-height: 40px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--color-accent);
     display: none;
     transition: background-color 0.3s ease;
 }
 
 #scrollToTopBtn:hover {
-    background-color: var(--color-secondary);
+    background-color: var(--color-warning);
 }
 
 
