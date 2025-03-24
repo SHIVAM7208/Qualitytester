@@ -592,3 +592,22 @@ form {
     text-rendering: auto;
     transform: translate(0, 0);
 }
+
+.autocomplete-suggestions {
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    background-color: white;
+    z-index: 1000;
+    width: calc(100% - 80%); /* Adjust width to match input field */
+}
+
+.autocomplete-suggestion {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.autocomplete-suggestion:hover {
+    background-color: #e9e9e9;
+}

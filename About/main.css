@@ -632,50 +632,17 @@ li {
 
 /* ----------------------------------------------------------------------- Skill-End   ----------------------------------------------------------- */
 /* ============================================================= Work-section ============================================================ */
-#portfolio {
-    background-color: #313741;
+
+.work {
+    background-color: black;
+    color:white
 }
 
-.gallery-title {
-    /* border: 1px solid red; */
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 45px;
-    letter-spacing: 1px;
-    color: #00d7bb;
-    font-weight: 600;
-    padding: 10px auto;
+.work .span{
+    color:white
 }
 
-/* .galery-menu{ */
-/* border: 1px solid red; */
-/* } */
-.galery-menu ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 10px;
 
-}
-
-.galery-menu ul li {
-    background: #eee;
-    padding: 12px 20px;
-    font-size: 16px;
-    margin: 5px;
-    letter-spacing: 1px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.galery-menu ul li.active {
-    background-color: #00d7bb;
-    color: #fff;
-    font-weight: 400;
-    font-size: 16px;
-    font-weight: 500;
-}
 
 .product {
     display: flex;

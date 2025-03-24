@@ -28,6 +28,39 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById('submitButton')?.addEventListener('click', submitForm);
     document.getElementById('Wcompleted')?.addEventListener('click', handleWaits);
     document.getElementById('downloadPDFBtn')?.addEventListener('click', downloadPDF);
+
+    // Autocomplete functionality
+    const languages = [
+        "Java", "JavaScript", "Python", "Ruby", "PHP", "C#", "C++", "Go", "Swift", "Kotlin",
+        "TypeScript", "SQL", "Perl", "R", "Scala", "Rust", "Dart", "Elixir", "Haskell", "MATLAB",
+        "Objective-C", "Shell", "Lua", "Groovy", "Visual Basic"
+    ];
+    const input = document.getElementById('autocomplete');
+    const suggestions = document.getElementById('autocomplete-suggestions');
+
+    input.addEventListener('input', function() {
+        const value = this.value.toLowerCase();
+        suggestions.innerHTML = '';
+        if (value) {
+            const filteredLanguages = languages.filter(language => language.toLowerCase().startsWith(value));
+            filteredLanguages.forEach(language => {
+                const suggestionItem = document.createElement('div');
+                suggestionItem.classList.add('autocomplete-suggestion');
+                suggestionItem.textContent = language;
+                suggestionItem.addEventListener('click', function() {
+                    input.value = language;
+                    suggestions.innerHTML = '';
+                });
+                suggestions.appendChild(suggestionItem);
+            });
+        }
+    });
+
+    document.addEventListener('click', function(e) {
+        if (e.target !== input) {
+            suggestions.innerHTML = '';
+        }
+    });
 });
 
 // ✅ Use Event Delegation for Navigation Links
@@ -189,4 +222,22 @@ function isValidDOB(dob) {
 function toggle(element) {
     // Toggle 'open' class
     element.parentNode.classList.toggle('open');
-  }
+}
+function displayAlert() {
+    const name = document.querySelector('input[placeholder="Enter Your Name"]').value;
+    if (name) {
+        alert(`Selenium is your, ${name}!`);
+    } else {
+        alert('are you ready to learn selenium.');
+    }
+}
+
+function displayConfirm() {
+    const name = document.querySelector('input[placeholder="Enter Your Name"]').value;
+    if (name) {
+        confirm(`Is your name ${name}?`);
+    } else {
+        confirm('Please enter your name.');
+    }
+}
+
