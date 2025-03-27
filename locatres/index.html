@@ -10,7 +10,7 @@
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
       <!-- <script defer src="Assets\script.js"></script>   -->
-      
+      <script src="/Assets/script.js"></script>
     </head>
 <body>
     <div id="header"></div>
@@ -32,11 +32,11 @@
                         <fieldset class="elment">
                             <legend>learn it to get placed?</legend>
                             <label for="bmw">
-                            <input id="checkBoxOption1" value="option1" name="checkBoxOption1" type="checkbox"> Java</label><BR>
+                            <input id="checkBoxOption1" value="option1" name="checkBoxOption1" type="checkbox">Java</label><BR>
                             <label for="benz">
-                            <input id="checkBoxOption2" value="option2" name="checkBoxOption2" type="checkbox"> Selenium</label><BR>
+                            <input id="checkBoxOption2" value="option2" name="checkBoxOption2" type="checkbox">Selenium</label><BR>
                             <label for="honda">
-                            <input id="checkBoxOption3" value="option3" name="checkBoxOption3" type="checkbox"> SQL</label>
+                            <input id="checkBoxOption3" value="option3" name="checkBoxOption3" type="checkbox">SQL</label>
                         </fieldset>
             
                         <fieldset class="elment">
@@ -52,7 +52,18 @@
                     <hr>
             
                     <section class="row1">
-                        
+                        <fieldset class="element">
+                            <legend>Mouse Hover</legend>
+                            <div class="mouse-hover">
+                                <button id="mousehover" class="btn btn-primary">Mouse Hover</button>
+                                <div class="mouse-hover-content" id="hoverMenu">
+                                    <a href="#" id="goToTop">Top</a>
+                                    <a href="#" id="reloadPage">Reload</a>
+                                </div>
+                            </div>
+                        </fieldset>
+                      <!--  <hr>
+
                         <fieldset class="elment">
                             <legend>Mouse Hover </legend>
                             <div class="mouse-hover">
@@ -61,25 +72,25 @@
                                 <a href="#top">Top</a>
                                 <a href="#">Reload</a>
                             </div>
-                        </fieldset>
+                        </fieldset>-->
+            
                         
 
                         <fieldset class="elment">
-                            <legend>your Strong Languages? </legend>
-                            <input type="text" id="autocomplete" placeholder="Type to Select Programming Languages">
-                            <div id="autocomplete-suggestions" class="autocomplete-suggestions"></div>
-                        </fieldset>
+                            <legend>Find your code Languages? </legend>
+                             <input type="text" id="autocomplete" placeholder="Type to Select Programming Languages">
+                            </fieldset>
 
 
-                        
+                       
                         <fieldset class="elment">
-                            <legend>Tell me your Name ? </legend>
-                            <input type="text" placeholder="What is your Name">
+                            <legend>Tell me your Name</legend>
+                            <input type="text" placeholder="Enter Your Name">
                             <button onclick="displayAlert()">Alert</button>
                             <button onclick="displayConfirm()">Confirm</button>
                         </fieldset>
                     </section>
-            <!--
+             <!--
                     <section>
                         <div>
                             <fieldset>
@@ -107,7 +118,6 @@
                                 </table>
                             </fieldset>
                         </div>
-                        
                         <section class="row1">
                             <div>
                                 <fieldset class="elment">
@@ -117,26 +127,23 @@
                                     <input type="text" placeholder="Hide/Show Example">
                                 </fieldset>
                             </div>
-                           <fieldset class="elment">
+                            
+                            <fieldset class="elment">
                             <legend>Switch Window </legend>
                             <button onclick="openWindow()">Open Window</button>
                         </fieldset>
-                             -->
-                            
-                            
-            
-            
-             <!--
+
+                        
                             <fieldset class="elment">
                                 <legend>Calendar </legend>
                                 <input type="date">
-                            </fieldset> -->
-                        </section>
+                            </fieldset> 
+                        </section> -->
                         <hr>
                         <section class="row1">
                             <fieldset class="elment">
                                 <legend>I-Frame</legend>
-                                <iframe src="/form/index.html" ></iframe>
+                                <iframe id="iframe" src="https://www.saucedemo.com/" ></iframe>
                                <!--<iframe src="./form.html" ></iframe> -->
                             </fieldset>
                         </section>
@@ -198,5 +205,5 @@
      </button>
     
 </body>
-<script src="/Assets/script.js"></script>
+
 </html>
