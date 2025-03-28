@@ -27,8 +27,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Other functionalities
     document.getElementById('submitButton')?.addEventListener('click', submitForm);
     document.getElementById('Wcompleted')?.addEventListener('click', handleWaits);
-    document.getElementById('downloadPDFBtn')?.addEventListener('click', downloadPDF);
-    document.getElementById('autocomplete')?.addEventListener('click', setupAutoSuggestion);
+     document.getElementById('autocomplete')?.addEventListener('click', setupAutoSuggestion);
     document.getElementById('mousehover')?.addEventListener('mouseenter', setupHoverMenu);
 document.getElementById('goToTop')?.addEventListener('click', setupScrollToTop);
 document.getElementById('reloadPage')?.addEventListener('click', setupPageReload);
@@ -163,20 +162,6 @@ document.getElementById('Wcompleted').addEventListener('click', function() {
         alert('Please fill at least one field!');
     }
 });
-
-
-/**
- * Download a PDF version of the Selenium Cheatsheet
- */
-function downloadPDF() {
-    const element = document.getElementById('content');
-    html2pdf().from(element).set({
-        filename: 'Selenium_Cheatsheet.pdf',
-        html2canvas: { scale: 2 },
-        jsPDF: { orientation: 'portrait', unit: 'in', format: 'letter', compressPDF: true }
-    }).save();
-}
-
 /**
  * Helper functions for validation
  */

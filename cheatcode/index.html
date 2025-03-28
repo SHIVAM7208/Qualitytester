@@ -22,20 +22,15 @@
 
                         <div>
                                 <h1>Selenium WebDriver Cheat Sheet</h1>
-                                <div class="watermark">Learn Selenium with Shivam</div>
-      
-                                  <h2>Browser Initialization</h2>
-                                <pre>Firefox:
-                                 System.setProperty("webdriver.gecko.driver", "PathTo\\geckodriver.exe");
-                                 WebDriver driver = new FirefoxDriver();
+                                <hr>
+                                <h2>WebDriver Setup</h2>      
+                                <pre>Firefox:  WebDriver driver = new FirefoxDriver();
                               
-                                 Chrome:
-                                 System.setProperty("WebDriver.chrome.driver", "PathTo//chromedriver.exe");
-                                 WebDriver driver = new ChromeDriver();
+                                 Chrome:  WebDriver driver = new ChromeDriver();
                               
-                                 Safari:
-                                 WebDriver driver = new SafariDriver();
+                                 Safari:  WebDriver driver = new SafariDriver();
                                 </pre>
+                                <hr>
                                  <h2>Locators</h2>
                                 <pre>
                                       By CSS Selector:
@@ -50,6 +45,7 @@
                                       By Link Text:
                                       driver.findElement(By.linkText("NextPage")).click();
                                  </pre>
+                                 <hr>
                       
                                       <h2>Handling Alerts</h2>
                                       <pre>Accept Alert:
@@ -61,7 +57,7 @@
                                               Send Keys to Alert:
                                               driver.switchTo().alert().sendKeys("Text");
                                       </pre>
-      
+                                      <hr>
                                       <h2>Handling Cookies</h2>
                                       <pre>Add Cookie:
                                               driver.manage().addCookie(new Cookie("foo", "bar"));
@@ -72,13 +68,16 @@
                                               Delete Cookie:
                                               driver.manage().deleteCookieNamed("foo");
                                       </pre>
-      
-                                      <h2>Taking Screenshots</h2>
-                                      <pre>TakesScreenshot screenShot = (TakesScreenshot)driver;
-                                              FileHandler.copy(screenShot.getScreenshotAs(OutputType.FILE), new File("path/to/destination/folder/screenshot.png"));
-                                      </pre>
-                                      <h2>Page Navigation</h2>
-                                      <pre>Navigate Back:
+                                      <hr>
+                                      <h2>Screenshots</h2>
+                                      <pre>
+                                        TakesScreenshot screenShot = (TakesScreenshot)driver;
+
+                                        FileHandler.copy(screenShot.getScreenshotAs(OutputType.FILE), new File("path/to/destination/folder/screenshot.png"));
+                                      </pre><hr>
+                                      <h2>Navigation</h2>
+                                      <pre>
+                                              Navigate Back:
                                               driver.navigate().back();
                                               
                                               Navigate Forward:
@@ -87,9 +86,10 @@
                                               Refresh Page:
                                               driver.navigate().refresh();
                                       </pre>
-      
+                                      <hr>
                                       <h2>Window and Frame Handling</h2>
-                                      <pre>Switch to Frame by Index:
+                                      <pre>
+                                              Switch to Frame by Index:
                                               driver.switchTo().frame(0);
                                               
                                               Switch to Frame by Name:
@@ -97,50 +97,40 @@
                                               
                                               Switch to Main Content:
                                               driver.switchTo().defaultContent();
-                                      </pre>
-                                      <h2>Page Loading Strategy</h2>
-                                      <pre>Normal Loading:
-                                              ChromeOptions chromeOptions = new ChromeOptions();
-                                              chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-                                              WebDriver driver = new ChromeDriver(chromeOptions);
-                                              
-                                              Eager Loading:
-                                              chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
-                                              
-                                              None Loading:
-                                              chromeOptions.setPageLoadStrategy(PageLoadStrategy.NONE);
-                                      </pre>
-      
+                                      </pre><hr>
                                       <h2>WebDriverWait</h2>
-                                      <pre>WebDriverWait wait = new WebDriverWait(driver, 20);</n>
-                                      wait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath("//div[@id="Object_ID"]"), "Enter Your Personal Details"));
+                                      <pre> WebDriverWait wait = new WebDriverWait(driver, 20);
+                                      </n> wait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath("//div[@id="Object_ID"]"),"Details"));
                                       </pre>
                                       <h2>Fluent Wait</h2>
                                       <pre>Wait wait = new FluentWait(driver)
                                       .withTimeout(Duration.ofSeconds(20))
                                       .pollingEvery(Duration.ofSeconds(2))
                                       .ignoring(NoSuchElementException.class);</pre>
-      
+                                      <hr>
                                       <h2>Actions Class for Mouse and Keyboard Events</h2>
                                       <pre>Actions builder = new Actions(driver);
                                       builder.moveToElement("login-textbox").click().keyDown(Keys.SHIFT)
                                       .sendKeys("hello").keyUp(Keys.SHIFT).doubleClick().contextClick().build().perform();</pre>
-      
+                                      <hr>
                                       <h2>Execute JavaScript</h2>
                                       <pre>JavascriptExecutor js = (JavascriptExecutor) driver;
                                       js.executeScript("alert('Hello World');");</pre>
-      
+                                      <hr>
                                       <h2>Switch Windows</h2>
                                       <pre>String mainWindowHandle = driver.getWindowHandle();
                                       Set&lt;String&gt; allWindowHandles = driver.getWindowHandles();
                                       for(String handle : allWindowHandles) {
                                               driver.switchTo().window(handle);
                                       }</pre>
-      
-                                      <button class="download-btn" onclick="downloadPDF()">Download as PDF</button>
-      
-                     </div>
-
+                                      <hr>
+                                      <div class="text-center">
+                                      <button class="download-btn text-center"><a href= "https://drive.google.com/file/d/1OKziMSZ70V3j-RFuHLySCICudcPvUzSr/view?usp=sharing">Selenium Cheatcode</a></button>
+                                      <button class="download-btn text-center"><a href= "https://drive.google.com/file/d/1OKziMSZ70V3j-RFuHLySCICudcPvUzSr/view?usp=sharing">Java Cheatcode</a></button>
+                                      <button class="download-btn text-center"><a href= "https://drive.google.com/file/d/1OKziMSZ70V3j-RFuHLySCICudcPvUzSr/view?usp=sharing">SQL Cheatcode</a></button>
+                                      <button class="download-btn text-center"><a href= "https://drive.google.com/file/d/1OKziMSZ70V3j-RFuHLySCICudcPvUzSr/view?usp=sharing">GIT Cheatcode</a></button>
+                                      </div> </div>
+                     <br>
             	 </div>
           <div id="ad-bar" class="ad-bar-right col-md-2"></div>
     </div>
