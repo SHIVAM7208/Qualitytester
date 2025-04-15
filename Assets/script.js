@@ -132,13 +132,14 @@ function submitForm() {
 /**
  * Handles the waits functionality for the registration form
  */
+function handleWaits() {
 document.getElementById('Wcompleted').addEventListener('click', function() {
     const fields = [
         document.getElementById('Wusername').value,
-        document.getElementById('email').value,
-        document.getElementById('password').value,
-        document.getElementById('phone').value,
-        document.getElementById('address').value
+        document.getElementById('Wemail').value,
+        document.getElementById('Wpassword').value,
+        document.getElementById('Wphone').value,
+        document.getElementById('Waddress').value
     ];
 
     const filledFieldsCount = fields.filter(field => field !== '').length;
@@ -161,7 +162,7 @@ document.getElementById('Wcompleted').addEventListener('click', function() {
     } else {
         alert('Please fill at least one field!');
     }
-});
+}) };
 /**
  * Helper functions for validation
  */
