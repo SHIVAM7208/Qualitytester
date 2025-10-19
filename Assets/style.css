@@ -53,30 +53,10 @@ header.scrolled {
 }
 
 
-.ad-bar-left {
-    height: auto;
-    background-color: #f9f9f9; /* Light background to distinguish ads */
-
-    padding: 10px;
-    text-align: center;
-    overflow: hidden;
-}
-
-.ad-bar-right{
-    
-    height: auto;
-    background-color: #f9f9f9; /* Light background to distinguish ads */
-    padding: 10px;
-    text-align: center;
-    overflow: hidden;
-}
 
 @media (max-width: 750px) {
-    .ad-bar-left,
-    .ad-bar-right {
-      display: none;
-    }
-  }
+  .ad-bar-left, .ad-bar-right { display: none; }
+}
 
 #submit{
     margin:5rem;
@@ -597,4 +577,19 @@ form {
     width: 100%;
     height: 700px;
     border: none;
+}
+
+
+
+.form-wrapper {
+    margin-top: 40px !important;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10), 0 1.5px 4px rgba(0,0,0,0.08);
+    border: 2px solid #e0e0e0;
+    padding: 32px 24px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
 }
